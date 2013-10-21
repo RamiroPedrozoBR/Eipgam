@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CadastreActivity" >
+
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickOk"
+            android:text="@string/app_ok"
+            android:width="100dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+           android:onClick="onClickCancel"
+            android:text="@string/app_cancel"
+            android:width="100dp" />
+    </LinearLayout>
+    
+    <LinearLayout        
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="50dp" >
+        <EditText
+            android:id="@+id/cadastre_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/cadastre_name" />
+
+        <EditText
+            android:id="@+id/cadastre_edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/cadastre_email" />
+
+        <EditText
+            android:id="@+id/cadastre_edit_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            android:hint="@string/Cadastre_salary"/>
+
+        <EditText
+            android:id="@+id/cadastre_edit_payDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/cadastre_payDay"
+            android:inputType="number" />
+        <EditText
+            android:id="@+id/cadastre_edit_psw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/login_psw"
+            android:inputType="textPassword"  />
+
+        <EditText
+            android:id="@+id/cadastre_edit_pswRepite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/cadastre_pswRepite"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/cadastre_edit_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:hint="@string/cadastre_location" />
+
+    </LinearLayout>
+
+</RelativeLayout>

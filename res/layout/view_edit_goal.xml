@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditGoalActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickOk"
+                android:text="@string/app_ok"
+                android:width="100dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickCancel"
+                android:text="@string/app_cancel"
+                android:width="100dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/goal_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_name" />
+
+        <EditText
+            android:id="@+id/goal_edit_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_value"
+            android:inputType="numberDecimal" />
+
+        <Spinner
+            android:id="@+id/goal_list_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/goal_type" />
+        <LinearLayout android:id="@+id/goal_linearlayout_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+		        <DatePicker
+		            android:calendarViewShown="false"
+		            android:id="@+id/goal_date_estimative"
+		            android:layout_width="wrap_content"
+		        	android:layout_height="100dp" />
+		
+		        <EditText
+		            android:id="@+id/goal_edit_plots"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="@string/goal_number_of_plots"
+		            android:inputType="number" />
+		
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="horizontal" >
+		
+		            <CheckBox
+		                android:id="@+id/goal_check_alerts"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:hint="@string/goal_generate_alert"
+		                android:text="@string/goal_generate_alert" />
+		
+		            <CheckBox
+		                android:id="@+id/goal_check_spending"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:text="@string/goal_speling" />
+		        </LinearLayout>
+		
+		        <EditText
+		            android:id="@+id/goal_edit_tags"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:hint="@string/goal_tags"
+		            android:inputType="textMultiLine" />
+    		</LinearLayout>
+
+    		 <LinearLayout
+    		     android:id="@+id/goal_linearlayout_economize"
+    		     android:layout_width="match_parent"
+    		     android:layout_height="wrap_content"
+    		     android:layout_marginTop="-220dp"
+    		     android:orientation="vertical"
+    		     android:visibility="invisible" >
+
+		          <Spinner
+		            android:id="@+id/goal_list_spendingtype"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:hint="@string/goal_type" />
+		        <CheckBox
+		                android:id="@+id/goal_check_economize_alerts"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:hint="@string/goal_generate_alert"
+		                android:text="@string/goal_generate_alert" />
+    		     
+		     </LinearLayout>
+    </LinearLayout>
+ 
+</RelativeLayout>
